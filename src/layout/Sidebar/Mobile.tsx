@@ -8,6 +8,8 @@ import Typography from '@mui/material/Typography'
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded'
 import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded'
 import MenuContent from './MenuContent'
+import { dispatch } from '@/store'
+import { logout } from '@/store/reducers/auth'
 
 interface SidebarMobileProps {
   open: boolean | undefined
@@ -15,6 +17,10 @@ interface SidebarMobileProps {
 }
 
 export default function SidebarMobile({ open, toggleDrawer }: SidebarMobileProps) {
+  const handleLogout = () => {
+    dispatch(logout())
+  }
+
   return (
     <Drawer
       anchor='right'
@@ -51,7 +57,7 @@ export default function SidebarMobile({ open, toggleDrawer }: SidebarMobileProps
           <Divider />
         </Stack>
         <Stack sx={{ p: 2 }}>
-          <Button variant='outlined' fullWidth startIcon={<LogoutRoundedIcon />}>
+          <Button variant='outlined' fullWidth startIcon={<LogoutRoundedIcon />} onClick={handleLogout}>
             Logout
           </Button>
         </Stack>

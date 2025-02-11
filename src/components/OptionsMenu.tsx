@@ -10,6 +10,8 @@ import ListItemText from '@mui/material/ListItemText'
 import ListItemIcon, { listItemIconClasses } from '@mui/material/ListItemIcon'
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded'
 import MoreVertRoundedIcon from '@mui/icons-material/MoreVertRounded'
+import { logout } from '@/store/reducers/auth'
+import { dispatch } from '@/store'
 
 const MenuItem = styled(MuiMenuItem)({
   margin: '2px 0'
@@ -23,6 +25,10 @@ export default function OptionsMenu() {
   }
   const handleClose = () => {
     setAnchorEl(null)
+  }
+  const handleLogout = () => {
+    handleClose()
+    dispatch(logout())
   }
 
   return (
@@ -57,7 +63,7 @@ export default function OptionsMenu() {
         <MenuItem onClick={handleClose}>Settings</MenuItem>
         <Divider />
         <MenuItem
-          onClick={handleClose}
+          onClick={handleLogout}
           sx={{
             [`& .${listItemIconClasses.root}`]: {
               ml: 'auto',

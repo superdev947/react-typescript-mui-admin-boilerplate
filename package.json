@@ -1,4 +1,5 @@
 {
+  "name": "react-typescript-mui-admin-boilerplate",
   "main": "index.tsx",
   "scripts": {
     "start": "serve -s build",

@@ -1,7 +1,6 @@
 import IconButton from '@mui/material/IconButton'
 import Stack from '@mui/material/Stack'
 import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded'
-import NavbarBreadcrumbs from '@/components/NavbarBreadcrumbs'
 import ColorModeIcon from './ColorModeIcon'
 
 export default function Header() {
@@ -18,7 +17,6 @@ export default function Header() {
       }}
       spacing={2}
     >
-      <NavbarBreadcrumbs />
       <Stack direction='row' sx={{ gap: 1 }}>
         <IconButton size='small' aria-label='Open notifications'>
           <NotificationsRoundedIcon />

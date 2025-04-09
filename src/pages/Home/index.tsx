@@ -1,7 +1,5 @@
-import MainGrid from '@/pages/Home/MainGrid'
-
 const Home = () => {
-  return <MainGrid />
+  return <>Home</>
 }
 
 export default Home

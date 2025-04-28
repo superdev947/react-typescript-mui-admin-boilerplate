@@ -1,12 +1,12 @@
 import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 
-import { alpha } from '@mui/material/styles'
+import Header from '@/layout/Header'
+import AppNavbar from '@/layout/Header/AppNavbar'
+import Sidebar from '@/layout/Sidebar'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
-import AppNavbar from '@/layout/Header/AppNavbar'
-import Header from '@/layout/Header'
-import Sidebar from '@/layout/Sidebar'
+import { alpha } from '@mui/material/styles'
 
 const Layout = () => {
   return (

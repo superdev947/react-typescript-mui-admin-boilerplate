@@ -1,12 +1,12 @@
-import { styled } from '@mui/material/styles'
+import OptionsMenu from '@/components/OptionsMenu'
+import MenuContent from '@/layout/Sidebar/MenuContent'
 import Avatar from '@mui/material/Avatar'
-import MuiDrawer, { drawerClasses } from '@mui/material/Drawer'
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
+import MuiDrawer, { drawerClasses } from '@mui/material/Drawer'
 import Stack from '@mui/material/Stack'
+import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
-import MenuContent from '@/layout/Sidebar/MenuContent'
-import OptionsMenu from '@/components/OptionsMenu'
 
 const drawerWidth = 240
 
@@ -43,7 +43,7 @@ export default function Sidebar() {
       >
         <Box component='img' src='./logo.png' alt='logo' sx={{ width: 35 }} />
         <Typography component='h2' variant='h6' sx={{ ml: 1 }}>
-          Xrippled
+          Admin Panel
         </Typography>
       </Box>
       <Divider />

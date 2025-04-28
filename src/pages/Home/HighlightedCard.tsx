@@ -1,11 +1,11 @@
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded'
 import InsightsRoundedIcon from '@mui/icons-material/InsightsRounded'
-import useMediaQuery from '@mui/material/useMediaQuery'
+import Button from '@mui/material/Button'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
 import { useTheme } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 export default function HighlightedCard() {
   const theme = useTheme()

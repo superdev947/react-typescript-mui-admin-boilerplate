@@ -1,13 +1,13 @@
-import { NavLink } from 'react-router-dom'
+import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded'
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded'
+import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded'
 import List from '@mui/material/List'
-import Stack from '@mui/material/Stack'
 import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded'
-import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded'
-import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded'
+import Stack from '@mui/material/Stack'
+import { NavLink } from 'react-router-dom'
 
 const mainListItems = [
   { link: '/', text: 'Home', icon: <HomeRoundedIcon /> },

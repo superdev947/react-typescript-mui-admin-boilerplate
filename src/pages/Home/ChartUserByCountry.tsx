@@ -1,15 +1,15 @@
-import * as React from 'react'
-import { PieChart } from '@mui/x-charts/PieChart'
-import { useDrawingArea } from '@mui/x-charts/hooks'
-import { styled } from '@mui/material/styles'
-import Typography from '@mui/material/Typography'
+import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import Box from '@mui/material/Box'
-import Stack from '@mui/material/Stack'
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress'
+import Stack from '@mui/material/Stack'
+import { styled } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
+import { useDrawingArea } from '@mui/x-charts/hooks'
+import { PieChart } from '@mui/x-charts/PieChart'
+import * as React from 'react'
 
-import { IndiaFlag, UsaFlag, BrazilFlag, GlobeFlag } from '../../components/CustomIcons'
+import { BrazilFlag, GlobeFlag, IndiaFlag, UsaFlag } from '../../components/CustomIcons'
 
 const data = [
   { label: 'India', value: 50000 },

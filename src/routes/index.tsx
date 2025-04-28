@@ -1,11 +1,11 @@
-import { createBrowserRouter } from 'react-router-dom'
 import { ROUTES } from '@/constants/routes'
 import Layout from '@/layout'
+import { createBrowserRouter } from 'react-router-dom'
 
-import Login from '@/pages/Login'
-import Home from '@/pages/Home'
-import Users from '@/pages/Users'
 import Blogs from '@/pages/Blogs'
+import Home from '@/pages/Home'
+import Login from '@/pages/Login'
+import Users from '@/pages/Users'
 
 const router = createBrowserRouter([
   {

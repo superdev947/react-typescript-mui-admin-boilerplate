@@ -1,7 +1,7 @@
 import Avatar from '@mui/material/Avatar'
 import Chip from '@mui/material/Chip'
-import { GridCellParams, GridRowsProp, GridColDef } from '@mui/x-data-grid'
 import { SparkLineChart } from '@mui/x-charts/SparkLineChart'
+import { GridCellParams, GridColDef, GridRowsProp } from '@mui/x-data-grid'
 
 type SparkLineData = number[]
 
@@ -64,6 +64,7 @@ export function renderAvatar(params: GridCellParams<{ name: string; color: strin
 
   return (
     <Avatar
+      alt='Avatar'
       sx={{
         backgroundColor: params.value.color,
         width: '24px',

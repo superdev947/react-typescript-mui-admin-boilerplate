@@ -7,12 +7,11 @@ import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded'
 import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded'
-import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded'
+import { ROUTES } from '@/constants/routes'
 
 const mainListItems = [
-  { link: '/', text: 'Home', icon: <HomeRoundedIcon /> },
-  { link: '/users', text: 'Users', icon: <PeopleRoundedIcon /> },
-  { link: '/blogs', text: 'Blogs', icon: <AssignmentRoundedIcon /> }
+  { link: ROUTES.HOME, text: 'Home', icon: <HomeRoundedIcon /> },
+  { link: ROUTES.JOBS, text: 'Jobs', icon: <PeopleRoundedIcon /> }
 ]
 
 export default function MenuContent() {

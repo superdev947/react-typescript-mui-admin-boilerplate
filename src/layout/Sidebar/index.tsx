@@ -41,9 +41,8 @@ export default function Sidebar() {
           alignItems: 'center'
         }}
       >
-        <Box component='img' src='./logo.png' alt='logo' sx={{ width: 35 }} />
         <Typography component='h2' variant='h6' sx={{ ml: 1 }}>
-          Xrippled
+          Job Board
         </Typography>
       </Box>
       <Divider />

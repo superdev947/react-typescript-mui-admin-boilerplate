@@ -1,7 +1,7 @@
-import MainGrid from '@/pages/Home/MainGrid'
+import { Box } from '@mui/material'
 
 const Home = () => {
-  return <MainGrid />
+  return <Box>Home</Box>
 }
 
 export default Home

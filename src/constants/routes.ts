@@ -1,8 +1,7 @@
 // routes.ts
 export const ROUTES = {
   HOME: '/',
-  USERS: '/users',
-  BLOGS: '/blogs',
+  JOBS: '/jobs',
   LOGIN: '/login',
   NOT_FOUND: '*'
 }

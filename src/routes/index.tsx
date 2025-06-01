@@ -3,9 +3,8 @@ import { ROUTES } from '@/constants/routes'
 import Layout from '@/layout'
 
 import Login from '@/pages/Login'
+import Jobs from '@/pages/Jobs'
 import Home from '@/pages/Home'
-import Users from '@/pages/Users'
-import Blogs from '@/pages/Blogs'
 import ProtectedRoute from './ProtectedRoute'
 
 const router = createBrowserRouter([
@@ -20,12 +19,8 @@ const router = createBrowserRouter([
             element: <Home />
           },
           {
-            path: ROUTES.USERS,
-            element: <Users />
-          },
-          {
-            path: ROUTES.BLOGS,
-            element: <Blogs />
+            path: ROUTES.JOBS,
+            element: <Jobs />
           }
         ]
       }

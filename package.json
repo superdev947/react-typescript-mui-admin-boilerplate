@@ -1,5 +1,9 @@
 {
-  "main": "index.tsx",
+  "name": "admin-dashboard",
+  "version": "1.0.0",
+  "description": "Admin Dashboard",
+  "author": "super.dev.947",
+  "main": "src/index.tsx",
   "scripts": {
     "start": "serve -s build",
     "dev": "webpack serve --mode development --open",
@@ -12,12 +16,6 @@
     "@emotion/styled": "11.14.0",
     "@mui/icons-material": "^6.4.3",
     "@mui/material": "6.4.3",
-    "@mui/x-charts": "^7.26.0",
-    "@mui/x-data-grid": "^7.26.0",
-    "@mui/x-data-grid-pro": "^7.26.0",
-    "@mui/x-date-pickers": "^7.26.0",
-    "@mui/x-date-pickers-pro": "^7.26.0",
-    "@mui/x-tree-view": "^7.26.0",
     "@reduxjs/toolkit": "^2.5.1",
     "dayjs": "^1.11.13",
     "react": "^18.3.1",

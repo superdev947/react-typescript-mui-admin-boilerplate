@@ -1,5 +1,5 @@
-import * as React from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
+import * as React from 'react'
 
 interface AppThemeProps {
   children: React.ReactNode
@@ -11,9 +11,5 @@ export default function AppTheme(props: AppThemeProps) {
     return createTheme()
   }, [])
 
-  return (
-    <ThemeProvider theme={theme} disableTransitionOnChange>
-      {children}
-    </ThemeProvider>
-  )
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }

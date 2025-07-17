@@ -1,7 +1,8 @@
-import IconButton from '@mui/material/IconButton'
-import Stack from '@mui/material/Stack'
-import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded'
+import { NotificationsRounded as NotificationsRoundedIcon } from '@mui/icons-material'
+import { IconButton, Stack } from '@mui/material'
+
 import NavbarBreadcrumbs from '@/components/NavbarBreadcrumbs'
+
 import ColorModeIcon from './ColorModeIcon'
 
 export default function Header() {

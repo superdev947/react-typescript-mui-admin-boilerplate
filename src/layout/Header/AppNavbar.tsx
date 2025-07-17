@@ -1,12 +1,8 @@
-import * as React from 'react'
-import { styled } from '@mui/material/styles'
-import AppBar from '@mui/material/AppBar'
-import Stack from '@mui/material/Stack'
-import IconButton from '@mui/material/IconButton'
-import MuiToolbar from '@mui/material/Toolbar'
-import { tabsClasses } from '@mui/material/Tabs'
-import Typography from '@mui/material/Typography'
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
+import { memo, useCallback, useState } from 'react'
+
+import { MenuRounded as MenuRoundedIcon } from '@mui/icons-material'
+import { AppBar, IconButton, Toolbar as MuiToolbar, Stack, styled, tabsClasses, Typography } from '@mui/material'
+
 import SideMenuMobile from '@/layout/Sidebar/Mobile'
 import ColorModeIcon from './ColorModeIcon'
 
@@ -26,12 +22,15 @@ const Toolbar = styled(MuiToolbar)({
   }
 })
 
-export default function AppNavbar() {
-  const [open, setOpen] = React.useState(false)
+const AppNavbar = function AppNavbar() {
+  const [open, setOpen] = useState(false)
 
-  const toggleDrawer = (newOpen: boolean) => () => {
-    setOpen(newOpen)
-  }
+  const toggleDrawer = useCallback(
+    (newOpen: boolean) => () => {
+      setOpen(newOpen)
+    },
+    []
+  )
 
   return (
     <AppBar
@@ -71,3 +70,5 @@ export default function AppNavbar() {
     </AppBar>
   )
 }
+
+export default memo(AppNavbar)

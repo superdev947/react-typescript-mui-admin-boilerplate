@@ -1,26 +1,37 @@
+import React, { Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
+
 import { ROUTES } from '@/constants/routes'
 import Layout from '@/layout'
-
-import Login from '@/pages/Login'
-import Jobs from '@/pages/Jobs'
-import Home from '@/pages/Home'
 import ProtectedRoute from './ProtectedRoute'
+
+// Replace direct imports with lazy imports
+const Home = React.lazy(() => import('@/pages/Home'))
+const Jobs = React.lazy(() => import('@/pages/Jobs'))
+const Login = React.lazy(() => import('@/pages/Login'))
 
 const router = createBrowserRouter([
   {
-    element: <Layout />,
+    element: <Layout />, // Layout is not lazy-loaded for now
     children: [
       {
-        element: <ProtectedRoute />,
+        element: <ProtectedRoute />, // ProtectedRoute is not lazy-loaded for now
         children: [
           {
             path: ROUTES.HOME,
-            element: <Home />
+            element: (
+              <Suspense fallback={<div>Loading...</div>}>
+                <Home />
+              </Suspense>
+            )
           },
           {
             path: ROUTES.JOBS,
-            element: <Jobs />
+            element: (
+              <Suspense fallback={<div>Loading...</div>}>
+                <Jobs />
+              </Suspense>
+            )
           }
         ]
       }
@@ -28,7 +39,11 @@ const router = createBrowserRouter([
   },
   {
     path: ROUTES.LOGIN,
-    element: <Login />
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <Login />
+      </Suspense>
+    )
   }
 ])
 

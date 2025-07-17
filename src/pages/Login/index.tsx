@@ -1,19 +1,23 @@
 import { FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
-import Checkbox from '@mui/material/Checkbox'
-import FormControlLabel from '@mui/material/FormControlLabel'
-import FormLabel from '@mui/material/FormLabel'
-import FormControl from '@mui/material/FormControl'
-import TextField from '@mui/material/TextField'
-import Typography from '@mui/material/Typography'
-import Stack from '@mui/material/Stack'
-import MuiCard from '@mui/material/Card'
-import { styled } from '@mui/material/styles'
+
+import {
+  Box,
+  Button,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Card as MuiCard,
+  Stack,
+  styled,
+  TextField,
+  Typography
+} from '@mui/material'
+
+import { ROUTES } from '@/constants/routes'
 import { dispatch } from '@/store'
 import { login } from '@/store/reducers/auth'
-import { ROUTES } from '@/constants/routes'
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',

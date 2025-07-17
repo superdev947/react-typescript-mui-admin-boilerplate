@@ -1,7 +1,7 @@
-import { styled } from '@mui/material/styles'
-import Typography from '@mui/material/Typography'
-import Breadcrumbs, { breadcrumbsClasses } from '@mui/material/Breadcrumbs'
-import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded'
+import { memo } from 'react'
+
+import { NavigateNextRounded as NavigateNextRoundedIcon } from '@mui/icons-material'
+import { Breadcrumbs, breadcrumbsClasses, styled, Typography } from '@mui/material'
 
 const StyledBreadcrumbs = styled(Breadcrumbs)(({ theme }) => ({
   margin: theme.spacing(1, 0),
@@ -14,7 +14,7 @@ const StyledBreadcrumbs = styled(Breadcrumbs)(({ theme }) => ({
   }
 }))
 
-export default function NavbarBreadcrumbs() {
+const NavbarBreadcrumbs = function NavbarBreadcrumbs() {
   return (
     <StyledBreadcrumbs aria-label='breadcrumb' separator={<NavigateNextRoundedIcon fontSize='small' />}>
       <Typography variant='body1'>Dashboard</Typography>
@@ -24,3 +24,5 @@ export default function NavbarBreadcrumbs() {
     </StyledBreadcrumbs>
   )
 }
+
+export default memo(NavbarBreadcrumbs)

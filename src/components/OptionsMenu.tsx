@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import { styled } from '@mui/material/styles'
-import Divider, { dividerClasses } from '@mui/material/Divider'
-import Menu from '@mui/material/Menu'
-import MuiMenuItem from '@mui/material/MenuItem'
-import { paperClasses } from '@mui/material/Paper'
-import { listClasses } from '@mui/material/List'
-import IconButton from '@mui/material/IconButton'
-import ListItemText from '@mui/material/ListItemText'
-import ListItemIcon, { listItemIconClasses } from '@mui/material/ListItemIcon'
-import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded'
-import MoreVertRoundedIcon from '@mui/icons-material/MoreVertRounded'
-import { logout } from '@/store/reducers/auth'
+import { memo, MouseEvent, useCallback, useState } from 'react'
+
+import { LogoutRounded as LogoutRoundedIcon, MoreVertRounded as MoreVertRoundedIcon } from '@mui/icons-material'
+
+import {
+  Divider,
+  dividerClasses,
+  IconButton,
+  listClasses,
+  ListItemIcon,
+  listItemIconClasses,
+  ListItemText,
+  Menu,
+  MenuItem as MuiMenuItem,
+  paperClasses,
+  styled
+} from '@mui/material'
+
 import { dispatch } from '@/store'
+import { logout } from '@/store/reducers/auth'
 
 const MenuItem = styled(MuiMenuItem)({
   margin: '2px 0'
 })
 
-export default function OptionsMenu() {
+const OptionsMenu = function OptionsMenu() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+  const handleClick = useCallback((event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget)
-  }
-  const handleClose = () => {
+  }, [])
+  const handleClose = useCallback(() => {
     setAnchorEl(null)
-  }
-  const handleLogout = () => {
+  }, [])
+  const handleLogout = useCallback(() => {
     handleClose()
     dispatch(logout())
-  }
+  }, [handleClose])
 
   return (
     <>
@@ -80,3 +86,5 @@ export default function OptionsMenu() {
     </>
   )
 }
+
+export default memo(OptionsMenu)

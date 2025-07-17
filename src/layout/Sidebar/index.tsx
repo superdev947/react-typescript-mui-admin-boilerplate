@@ -1,12 +1,7 @@
-import { styled } from '@mui/material/styles'
-import Avatar from '@mui/material/Avatar'
-import MuiDrawer, { drawerClasses } from '@mui/material/Drawer'
-import Box from '@mui/material/Box'
-import Divider from '@mui/material/Divider'
-import Stack from '@mui/material/Stack'
-import Typography from '@mui/material/Typography'
-import MenuContent from '@/layout/Sidebar/MenuContent'
+import { Avatar, Box, Divider, drawerClasses, Drawer as MuiDrawer, Stack, styled, Typography } from '@mui/material'
+
 import OptionsMenu from '@/components/OptionsMenu'
+import MenuContent from '@/layout/Sidebar/MenuContent'
 
 const drawerWidth = 240
 

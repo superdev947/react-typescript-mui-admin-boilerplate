@@ -1,19 +1,18 @@
-import Box from '@mui/material/Box'
-import IconButton from '@mui/material/IconButton'
-import { useColorScheme } from '@mui/material/styles'
-import DarkModeIcon from '@mui/icons-material/DarkModeRounded'
-import LightModeIcon from '@mui/icons-material/LightModeRounded'
+import { memo, useCallback } from 'react'
 
-export default function ColorModeIcon() {
+import { DarkModeRounded as DarkModeIcon, LightModeRounded as LightModeIcon } from '@mui/icons-material'
+import { Box, IconButton, useColorScheme } from '@mui/material'
+
+const ColorModeIcon = function ColorModeIcon() {
   const { mode, systemMode, setMode } = useColorScheme()
 
-  const handleMode = () => {
+  const handleMode = useCallback(() => {
     if ((systemMode || mode) === 'dark') {
       setMode('light')
     } else {
       setMode('dark')
     }
-  }
+  }, [mode, setMode, systemMode])
 
   if (!mode) {
     return (
@@ -44,3 +43,5 @@ export default function ColorModeIcon() {
     </IconButton>
   )
 }
+
+export default memo(ColorModeIcon)

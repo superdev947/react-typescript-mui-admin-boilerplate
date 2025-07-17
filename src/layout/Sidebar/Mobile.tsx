@@ -1,15 +1,12 @@
-import Avatar from '@mui/material/Avatar'
-import Button from '@mui/material/Button'
-import Divider from '@mui/material/Divider'
-import Drawer, { drawerClasses } from '@mui/material/Drawer'
-import Stack from '@mui/material/Stack'
-import IconButton from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
-import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded'
-import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded'
-import MenuContent from './MenuContent'
+import {
+  LogoutRounded as LogoutRoundedIcon,
+  NotificationsRounded as NotificationsRoundedIcon
+} from '@mui/icons-material'
+import { Avatar, Button, Divider, Drawer, drawerClasses, IconButton, Stack, Typography } from '@mui/material'
+
 import { dispatch } from '@/store'
 import { logout } from '@/store/reducers/auth'
+import MenuContent from './MenuContent'
 
 interface SidebarMobileProps {
   open: boolean | undefined

@@ -1,14 +1,15 @@
+import { ReactNode, useMemo } from 'react'
+
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import * as React from 'react'
 import { colorSchemes, shadows, shape, typography } from './themePrimitives'
 
 interface AppThemeProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export default function AppTheme(props: AppThemeProps) {
   const { children } = props
-  const theme = React.useMemo(() => {
+  const theme = useMemo(() => {
     return createTheme({
       cssVariables: {
         colorSchemeSelector: 'data-mui-color-scheme',
